@@ -7,8 +7,8 @@ import java.io.PrintWriter;
 public class QUANLIDSTHUOC {
     Scanner quanliScanner = new Scanner(System.in);
     DANHSACHTHUOC ds;
-    private File fileDataThuoc = new File("D:\\phongMach_THUOC\\quanLiPhongMach\\dataThuoc.txt");
-    String filePathDataThuoc = "D:\\phongMach_THUOC\\quanLiPhongMach\\dataThuoc.txt";
+    private File fileDataThuoc = new File("E:\\java\\baitap\\doan\\THUOC\\quanLiPhongMach-main\\THUOC\\dataThuoc.txt");
+    String filePathDataThuoc = "E:\\java\\baitap\\doan\\THUOC\\quanLiPhongMach-main\\THUOC\\dataThuoc.txt";
 
     QUANLIDSTHUOC() {
         this.ds = new DANHSACHTHUOC();
@@ -83,6 +83,7 @@ public class QUANLIDSTHUOC {
             System.out.println("Nhap 4 de thong ke thuoc theo ten");
             System.out.println("Nhap 5 de in toan bo thuoc");
             System.out.println("Nhap 6 de tao don thuoc: ");
+            System.out.println("Nhap 7 de truy cap menu phieu nhap hang");
             System.out.print("Nhap lua chon: ");
             option = quanliScanner.nextInt();
 
@@ -132,6 +133,11 @@ public class QUANLIDSTHUOC {
                 QUANLIDONTHUOC quanlidonthuoc = new QUANLIDONTHUOC(ds);
                 quanlidonthuoc.menuDonThuoc();
             }
+            if (option == 7){
+                    QUANLYNHAPHANG qlnh = new QUANLYNHAPHANG();
+                    qlnh.menu();
+                }
+            
 
         } while (option != 0);
     }
